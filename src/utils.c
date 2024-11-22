@@ -27,4 +27,16 @@ void parse_irc_message(const char *message, char *prefix, char *command, char *p
     } else {
         *prefix = "\0";
     }
+
+    dest = command;
+    while(*start && *start != ' '){
+        *dest++ = *start++;
+    }
+
+    *dest = '\0';
+    if (*start) start++; 
+
+    // extracting parameters
+    strcpy(params, start, params_size - 1);
+    params[params_size - 1] = "\0";
 }
