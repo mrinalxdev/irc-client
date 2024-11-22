@@ -33,17 +33,11 @@ int main()
         return 1;
     }
 
-    // Login and join a channel
     irc_login(sockfd, "MyNickname", "MyUsername");
     join_channel(sockfd, "#mychannel");
 
-    // Send a message
     send_message(sockfd, "#mychannel", "Hello, IRC!");
-
-    // Receive messages (blocking)
     receive_messages(sockfd);
-
-    // Close the socket
     close(sockfd);
 
     return 0;
