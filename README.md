@@ -81,3 +81,15 @@ Internet Relay Chat (IRC) is a text-based communication protocol that enables re
 - Use VPN for additional anonymity
 - Understand network-specific policies
 
+## Usage
+
+#### Successful Connection
+
+If the client successfully connects to the IRC server, it will likely show server messages, such as a welcome banner or information about the server:
+
+```bash
+[INFO] Connected to IRC server at 127.0.0.1:6667
+[SERVER] :irc.example.net NOTICE Auth :Welcome to the Example IRC Network
+[SERVER] :irc.example.net 001 your_nickname :Welcome to the IRC Network, your_nickname!
+[SERVER] :irc.example.net 002 your_nickname :Your host is irc.example.net, running version InspIRCd-3.9.0
+```
